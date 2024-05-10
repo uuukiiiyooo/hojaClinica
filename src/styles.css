@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h4 {
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    padding: 25px;
+    background-color: aliceblue;
+    border-radius: 16px;
+}
+
+.personalData {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.col {
+    flex: 1;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 16px); /* Adjusted width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align-last: center; /* Align text to center */
+}
+
+textarea {
+    width: calc(100% - 16px); /* Adjusted width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .col {
+        flex: 100%; /* Full width for each column on smaller screens */
+        margin-right: 0; /* No margin for columns on smaller screens */
+        margin-bottom: 15px; /* Add bottom margin between rows on smaller screens */
+    }
+}

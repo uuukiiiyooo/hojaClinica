@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Clínica</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<h1>Historia Clínica</h1>
+
+<form id="patientForm">
+    <section class="personalData">
+        <h2>Datos personales</h2>
+        <div class="row">
+            <div class="col">
+                <label for="name">Nombre(s):</label>
+                <input type="text" id="name" name="nombre" required>
+            </div>
+            <div class="col">
+                <label for="lNameP">Apellido paterno:</label>
+                <input type="text" id="lNameP" name="apellidoPaterno" required>
+            </div>
+            <div class="col">
+                    <label for="lNameM">Apellido materno:</label>
+                    <input type="text" id="lNameM" name="apellidoMaterno" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="age">Edad (años):</label>
+                <input type="number" id="age" name="edad" required>
+            </div>
+            <div class="col">
+                <label for="month">Mes de nacimiento</label>
+                <select id="month" name="mes" required>
+                    <option value="" disabled selected hidden>Seleccionar mes</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="day">Día de nacimiento</label>
+                <select id="day" name="dia" required>
+                    <option value="" disabled selected hidden>Seleccionar día</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="sex">Sexo:</label>
+                <select id="sex" name="sexo" required>
+                    <option value="" disabled selected hidden>Seleccionar sexo</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="gender">Género:</label>
+                <select id="gender" name="genero" required>
+                    <option value="" disabled selected hidden>Seleccionar género</option>
+                    <option value="masculino">Femenino</option>
+                    <option value="femenino">Masculino</option>
+                    <option value="noBinario">No Binario</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="occupation">Ocupación:</label>
+                <input type="text" id="occupation" name="ocupacion" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="reason">Motivo de consulta:</label>
+                <textarea id="reason" name="motivo" rows="4" required></textarea>
+            </div>
+        </div>   
+    </section>    
+    <section class="healthBackground">
+        <h2>Antecedentes de salud</h2>
+        <div class="row">
+            <h4>¿Padece o ha padecido alguna de las siguientes enfermedades en los últimos 21 días?</h4>
+            <div class="col">
+                <input type="checkbox" id="diarrea" name="diarrea">
+                <label for="diarrea">Diarrea</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="estreñimiento" name="estreñimiento">
+                <label for="estreñimiento">Estreñimiento</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="gastritis" name="gastritis">
+                <label for="gastritis">Gastritis</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" id="ulcera" name="ulcera">
+                <label for="ulcera">Úlcera</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="nausea" name="nausea">
+                <label for="nausea">Náusea</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="pirosis" name="pirosis">
+                <label for="pirosis">Pirosis</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" id="vomito" name="vomito">
+                <label for="vomito">Vómito</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="colitis" name="colitis">
+                <label for="colitis">Colitis</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="dentadura">Dentadura:</label>
+                <textarea id="dentadura" name="dentadura" rows="4" required></textarea>
+            </div>
+            <div class="col">
+                <label for="otro">Otro:</label>
+                <textarea id="otro" name="otro" rows="4" required>Padecimientos o cirujías.
+                </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="diagnosticadas">Enfermedades diagnosticadas:</label>
+                <textarea id="diagnosticadas" name="diagnosticadas" rows="4" required></textarea>
+            </div>
+            <div class="col">
+                <label for="graves">Enfermedades graves y/o accidentes:</label>
+                <textarea id="graves" name="graves" rows="4" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="medicamento">¿Toma algún medicamento?</label>
+                <textarea id="medicamento" name="medicamento" rows="4" required>Medicamento, dosis y desde cuándo.</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Antecedentes familiares</h4>
+            <div class="col">
+                <input type="checkbox" id="obesidad" name="obesidad">
+                <label for="obesidad">Obesidad</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="diabetes" name="diabetes">
+                <label for="diabetes">Diabetes</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="hta" name="hta">
+                <label for="hta">HTA</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" id="cancer" name="cancer">
+                <label for="cancer">Cáncer</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="hipercolesterolemia" name="hipercolesterolemia">
+                <label for="hipercolesterolemia">Hipercolesterolemia</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" id="hipertrigliceridemia" name="hipertrigliceridemia">
+                <label for="hipertrigliceridemia">Hipertrigliceridemia</label>
+            </div>
+        </div>
+    </section>
+
+        <section class="gynecologicalAspects">
+            <h2>Aspectos Ginecológicos</h2>
+            <div class="row">
+                <div class="col">
+                    <label for="contraceptive">Anticonceptivos:</label>
+                    <textarea id="contraceptive" name="contraceptive" rows="4">Medicamento, dosis y desde cuándo.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" id="pregnancy" name="pregnancy">
+                    <label for="pregnancy">Actualmente embarazada</label>
+                </div>
+                <div class="col">
+                    <input type="checkbox" id="climacteric" name="climacteric">
+                    <label for="climacteric">Climaterio</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="period">Días desde el último periodo</label>
+                    <input type="number" id="period" name="period" required>
+                </div>
+                <div class="col">
+                    <label for="periodTime">Ciclo</label>
+                    <textarea id="periodTime" name="periodTime" rows="1">¿Regular?</textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="lifestyle">
+            <h2>Estilo de vida</h2>
+            <div class="row">
+                <div class="col">
+                    <label for="wakeUp">Despertar (hora)</label>
+                    <input type="number" id="wakeUp" name="wakeUp" required>
+                </div>
+                <div class="col">
+                    <label for="morning">Actividades</label>
+                    <textarea id="morning" name="morning" rows="4" required>Describa actividades realizadas al levantarse.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="breakfast">Desayuno (hora)</label>
+                    <input type="number" id="breakfast" name="breakfast" required>
+                </div>
+                <div class="col">
+                    <label for="noon">Actividades</label>
+                    <textarea id="noon" name="noon" rows="4" required>Describa actividades realizadas durante y después del desayuno.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="brunch">Comida</label>
+                    <input type="number" id="brunch" name="brunch" required>
+                </div>
+                <div class="col">
+                    <label for="evening">Actividades</label>
+                    <textarea id="evening" name="evening" rows="4" required>Describa actividades realizadas durante y después de comer.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="night">Cena (hora)</label>
+                    <input type="number" id="night" name="night" required>
+                </div>
+                <div class="col">
+                    <label for="dinner">Actividades</label>
+                    <textarea id="dinner" name="dinner" rows="4" required>Describa actividades realizadas durante y después de cenar hasta dormir.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="physicalActivity">Actividad física</label>
+                    <select id="physicalActivity" name="physicalActivity" required>
+                        <option value="" disabled selected hidden>Seleccionar tipo de actividad</option>
+                        <option value="noActivity">Sin actividad.</option>
+                        <option value="lightActivity">Actividad ligera (3 horas semanales)</option>
+                        <option value="moderateActivity">Actividad moderada (6 horas semanales)</option>
+                        <option value="intenseActivity">Actividad intensa (4 a 5 horas diarias)</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="activityDescription">Describa la actividad física:</label>
+                    <textarea id="activityDescription" name="activityDescription" rows="4" required>Duración, intensidad, e itinerario de actividad/descanso.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Frecuencia y cantidad de consumo de:</h4>
+                <div class="col">
+                    <label for="coffee">Café</label>
+                    <textarea id="coffee" name="coffee" rows="3"></textarea>
+                </div>
+                <div class="col">
+                    <label for="tobacco">Tabaco</label>
+                    <textarea id="tobacco" name="tobacco" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="alcohol">Acohol</label>
+                    <textarea id="alcohol" name="alcohol" rows="3"></textarea>
+                </div>
+                <div class="col">
+                    <label for="other">Otros</label>
+                    <textarea id="other" name="other" rows="3"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="dietaryIndicators">
+            <h2>Indicadores dietéticos</h2>
+            <div class="row">
+                <h4>Entre semana, cuántos días come en:</h4>
+                <div class="col">
+                    <label for="weekdaysHome">casa</label>
+                    <input type="number" id="weekdaysHome" name="weekdaysHome" required>
+                </div>
+                <div class="col">
+                    <label for="weekdaysOut">fuera</label>
+                    <input type="number" id="weekdaysOut" name="weekdaysOut" required>
+                </div>
+            </div>
+            <div class="row">
+                <h4>En fines de semana, cuántos días come en:</h4>
+                <div class="col">
+                    <label for="weekendHome">casa</label>
+                    <input type="number" id="weekendHome" name="weekendHome" required>
+                </div>
+                <div class="col">
+                    <label for="weekendOut">fuera</label>
+                    <input type="number" id="weekendOut" name="weekendOut" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="cooking">¿Quién prepara sus alimentos?</label>
+                </div>
+            </div>
+        </section>
+        
+        <div class="row">
+            <div class="col">
+                <button type="submit">Guardar</button>
+            </div>
+        </div>
+    </section>    
+</form>
+
+<script src="src/script.js"></script>
+</body>
+</html>
