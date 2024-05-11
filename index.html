@@ -143,6 +143,10 @@
                 <label for="medicamento">¿Toma algún medicamento?</label>
                 <textarea id="medicamento" name="medicamento" rows="4" required>Medicamento, dosis y desde cuándo.</textarea>
             </div>
+            <div class="col">
+                <label for="alergies">Alergias</label>
+                <textarea id="alergies" name="alergies" rows="4"></textarea>
+            </div>
         </div>
         <div class="row">
             <h4>Antecedentes familiares</h4>
@@ -276,7 +280,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="alcohol">Acohol</label>
+                    <label for="alcohol">Alcohol</label>
                     <textarea id="alcohol" name="alcohol" rows="3"></textarea>
                 </div>
                 <div class="col">
@@ -312,7 +316,37 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="cooking">¿Quién prepara sus alimentos?</label>
+                    <label for="previous">¿Ha estado en algún plan nutricional previamente?</label>
+                    <textarea id="previous" name="previous" rows="3">Cuántas veces, hace cuánto y durante cuánto tiempo. Motivos por los que terminó el proceso.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="appetite">Apetito</label>
+                    <select id="appetite" name="appetite" required>
+                        <option value="" disabled selected hidden>---</option>
+                        <option value="goodAppetite">Buen apetito</option>
+                        <option value="regularAppetite">Apetito regular</option>
+                        <option value="lowAppetite">Poco apetito</option>
+                    </select>    
+                </div>
+                <div class="col">
+                    <label for="cooker">¿Quién prepara sus alimentos?</label>
+                    <input type="text" id="cooker" name="cooker">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="favoriteFood">Alimentos preferidos</label>
+                    <textarea id="favoriteFood" name="favoriteFood" rows="4"></textarea>
+                </div>
+                <div class="col">
+                    <label for="dislikedFood">Alimentos a evitar</label>
+                    <textarea id="dislikedFood" name="dislikedFood" rows="4"></textarea>
+                </div>
+                <div class="col">
+                    <label for="badFood">Generan malestar</label>
+                    <textarea id="badFood" name="badFood" rows="4"></textarea>
                 </div>
             </div>
         </section>
